@@ -48,8 +48,11 @@ export default {
   computed: {
       formattedDate: function () {
           const year = String(this.date.getFullYear()).split('');
+          console.log(year);
           const month = String(this.pad(this.date.getMonth() + 1)).split('');
-          const day = String(this.pad(this.date.getDate() + 1)).split('');
+          console.log(month);
+          const day = String(this.pad(this.date.getDate())).split('');
+          console.log(day);
           return `${day[0]}${month[0]}-${year[0]}${year[1]}-${month[1]}${year[2]}${day[1]}${year[3]}`;
       },
   },
